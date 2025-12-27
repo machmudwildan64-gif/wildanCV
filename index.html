@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>CV MUHAMMAD WILDAN MAHMUD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="cv-container">
+
+  <!-- HEADER -->
+  <header class="cv-header">
+  <img 
+    src="wildan1.png" 
+    alt="Foto Muhammad Wildan Machmud" 
+    class="profile-img"
+    onclick="openImage(this.src)"
+  >
+  <div>
+    <h1>Muhammad Wildan Machmud</h1>
+    <p>WEB DESIGN</p>
+  </div>
+</header>
+
+
+  <div class="cv-body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <section>
+        <h2>Detail Kontak</h2>
+        <ul class="contact">
+          <li><i class="fa-solid fa-envelope"></i>Machmudwildan64@gmail.com</li>
+          <li><i class="fa-solid fa-phone"></i> (62+) 81293208144</li>
+          <li><i class="fa-solid fa-location-dot"></i>Sulawesi Utara, Manado,Tuminting</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Pendidikan</h2>
+        <p><strong>Pengembangan Perangkat Lunak</strong><br>
+        PeTiK II Jombang<br>
+        2025 – 2026</p>
+      </section>
+
+      <section>
+        <h2>Keterampilan</h2>
+        <ul class="skills">
+          <li>
+      <strong>Web Design & Frontend</strong>
+      <ul>
+        <li>Membuat tampilan website sederhana dan responsif</li>
+        <li>Memahami dasar struktur HTML dan styling dengan CSS</li>
+        <li>Menerapkan desain yang rapi, konsisten, dan user-friendly</li>
+        <li>Dasar JavaScript untuk interaksi sederhana pada website</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Tools & Teknologi</strong>
+      <ul>
+        <li>Visual Studio Code sebagai code editor utama</li>
+        <li>MySQL dasar untuk pengelolaan database sederhana</li>
+        <li>PyCharm untuk pengenalan pengembangan aplikasi Python</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Version Control</strong>
+      <ul>
+        <li>Dasar penggunaan Git (commit, push, pull)</li>
+        <li>Mengelola repository sederhana di GitHub</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Soft Skills</strong>
+      <ul>
+        <li>Kemauan belajar tinggi dan cepat beradaptasi</li>
+        <li>Terbuka terhadap kritik dan saran</li>
+        <li>Mampu bekerja mandiri maupun mengikuti arahan</li>
+      </ul>
+    </li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <section>
+        <h2>Ringkasan</h2>
+        <p>
+          Saya adalah Web Designer pemula yang telah belajar selama kurang lebih 3 bulan 
+          dan memiliki minat besar dalam pengembangan website modern. Saat ini saya terbiasa
+          menggunakan Visual Studio Code sebagai editor utama dan sedang mempelajari dasar-dasar
+          JavaScript untuk membuat tampilan web yang lebih interaktif. Saya juga mulai mengenal 
+          pengelolaan database menggunakan MySQL serta pengembangan aplikasi sederhana dengan PyCharm.
+          Dalam proses belajar, saya menggunakan GitHub untuk menyimpan dan mengelola source code
+          sebagai bagian dari pengenalan version control. Saya memiliki semangat belajar yang tinggi, 
+          terbuka terhadap feedback, dan siap berkembang lebih jauh di dunia web development.
+        </p>
+      </section>
+
+      <section>
+  <h2>Sertifikat & Pelatihan</h2>
+
+  <div class="certificate-grid">
+    <div class="certificate-card">
+      <p>Web Design certificate</p>
+      <img src="Muhammad Wildan Mahmud.png"
+     alt="Web Development Certificate"
+     onclick="openModal(this)">
+    </div>
+
+  </div>
+</section>
+
+
+    </main>
+
+  </div>
+</div>
+<!-- MODAL FULLSCREEN -->
+<div id="imgModal" class="img-modal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <p id="modalCaption"></p>
+</div>
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const captionText = document.getElementById("modalCaption");
+  const closeBtn = document.querySelector(".close-modal");
+
+  function openModal(img) {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+    captionText.innerText = img.alt;
+  }
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+<script>
+  function openImage(src) {
+    window.open(src, '_blank');
+  }
+</script>
+
+
+</body>
+</html>
